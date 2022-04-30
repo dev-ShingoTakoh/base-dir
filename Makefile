@@ -35,10 +35,6 @@ down:
 events:
 	docker-compose events
 
-# docker execコマンドと同等のことができます。引数にサービス名と実行するコマンドを指定して、実行します。
-exec:
-	@echo docker-compose exec $(S) sh
-
 # コマンドの一覧を表示します。
 help:
 	docker-compose help
@@ -103,3 +99,7 @@ unpause:
 # docker-composeのバージョンを表示します。
 version:
 	docker-compose version
+
+# コンテナ、イメージ、ボリューム、ネットワークそして未定義コンテナ、全てを一括消去するコマンド
+down-rmi:
+	docker-compose down --rmi all --volumes --remove-orphans

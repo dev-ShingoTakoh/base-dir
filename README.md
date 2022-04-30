@@ -4,6 +4,15 @@
 
 ## 概要
 
+## 目次
+[事前準備](#anchor1)  
+[環境](#anchor2)  
+[実行コマンド](#anchor3)  
+[環境の削除](#anchor4)  
+[参考リンク](#anchor5)  
+
+<a id="anchor1"></a>
+
 ## 事前準備
 
 - Makefileを一部使用しています。Macの場合はHomebrewをインストールしていると使用できると思いますが、Windowsの場合は下記リンクを参考に実行環境を整えてください。
@@ -13,48 +22,41 @@
   ※MacでHomebrewをインストールしていない場合は下記リンクからインストールしてください。  
   [Homebrew](https://brew.sh/index_ja)
 
+<a id="anchor2"></a>
+
 ## 環境
+
+<a id="anchor3"></a>
 
 ## 実行コマンド
 
-## 不要になった時は下記を実行
+<a id="anchor4"></a>
 
-- コンテナが立ち上がっている場合
+## 環境の削除
 
-~~~sh
-docker ps 
-~~~
+### コンテナのみ削除する場合
 
-- 停止するコンテナの[CONTAINER ID]を確認するして、下記コマンドを実行する  
-    ※もしない場合はコンテナが起動していないので次のステップに進む  
+- コンテナを停止する
 
 ~~~sh
-docker stop [調べたCONTAINER ID]
+make stop 
 ~~~
 
 - 停止したコンテナを削除する
 
 ~~~sh
-docker rm [調べたCONTAINER ID]
+make rm
 ~~~
 
-- [IMAGE ID]を検索するため下記コマンドを実行する
-  
-~~~sh
-docker images 
-~~~
+### コンテナ・ボリューム・イメージ・ネットワーク全て削除する場合
 
-- イメージを削除
-  
-~~~sh
-docker rmi [調べたIMAGE ID]
-~~~
-
-- 使用していないdocker-networkを削除
+- 削除されるのはdocker-compose.ymlで記述している内容に限ります。
 
 ~~~sh
-docker network prune
+make down-rmi
 ~~~
+
+<a id="anchor5"></a>
 
 ## 参考リンク
 

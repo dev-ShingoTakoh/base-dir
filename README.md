@@ -6,10 +6,11 @@
 
 ## 目次
 [事前準備](#anchor1)  
-[環境](#anchor2)  
-[実行コマンド](#anchor3)  
+[環境の詳細](#anchor2)  
+[環境の構築](#anchor3)  
 [環境の削除](#anchor4)  
 [参考リンク](#anchor5)  
+[etc](#anchor6)  
 
 <a id="anchor1"></a>
 
@@ -24,11 +25,11 @@
 
 <a id="anchor2"></a>
 
-## 環境
+## 環境の詳細
 
 <a id="anchor3"></a>
 
-## 実行コマンド
+## 環境の構築
 
 <a id="anchor4"></a>
 
@@ -61,3 +62,7 @@ make down-rmi
 ## 参考リンク
 
 [github-markdown-css CDN](https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown.min.css)
+
+<a id="anchor6"></a>
+
+## etc
